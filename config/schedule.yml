@@ -1,0 +1,4 @@
+update_currency_rates_job:
+  cron: "0 0 * * * *" # Runs every hour
+  class: UpdateCurrencyRatesJob
+  queue: default

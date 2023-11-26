@@ -1,0 +1,56 @@
+A server is already running. Check /home/yart/coding/ruby/cbr_currency/tmp/pids/server.pid.
+=> Booting Puma
+=> Rails 5.2.8.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Exiting
+2023-11-26T06:17:09.279Z pid=3913930 tid=2bn36 INFO: Booted Rails 5.2.8.1 application in development environment
+2023-11-26T06:17:09.279Z pid=3913930 tid=2bn36 INFO: Running in ruby 2.7.5p203 (2021-11-24 revision f69aeb8314) [x86_64-linux]
+2023-11-26T06:17:09.279Z pid=3913930 tid=2bn36 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2023-11-26T06:17:09.279Z pid=3913930 tid=2bn36 INFO: Upgrade to Sidekiq Pro for more features and support: https://sidekiq.org
+2023-11-26T06:17:09.279Z pid=3913930 tid=2bn36 INFO: Booting Sidekiq 6.5.12 with Sidekiq::RedisConnection::RedisAdapter options {}
+2023-11-26T06:17:09.291Z pid=3913930 tid=2bn36 INFO: Cron Jobs - added job with name: update_currency_rates_job
+2023-11-26T06:17:09.295Z pid=3913930 tid=2bn36 INFO: Cron Jobs - added job with name: update_currency_rates_job
+2023-11-26T06:18:08.767Z pid=3913930 tid=2bn36 INFO: Shutting down
+2023-11-26T06:18:08.767Z pid=3913930 tid=2bn8i INFO: Scheduler exiting...
+2023-11-26T06:18:08.767Z pid=3913930 tid=2bn36 INFO: Terminating quiet threads
+2023-11-26T06:18:08.767Z pid=3913930 tid=2bn92 INFO: Scheduler exiting...
+2023-11-26T06:18:09.268Z pid=3913930 tid=2bn36 INFO: Pausing to allow jobs to finish...
+2023-11-26T06:18:09.769Z pid=3913930 tid=2bn36 INFO: Bye!
+A server is already running. Check /home/yart/coding/ruby/cbr_currency/tmp/pids/server.pid.
+=> Booting Puma
+=> Rails 5.2.8.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Exiting
+A server is already running. Check /home/yart/coding/ruby/cbr_currency/tmp/pids/server.pid.
+=> Booting Puma
+=> Rails 5.2.8.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Exiting
+A server is already running. Check /home/yart/coding/ruby/cbr_currency/tmp/pids/server.pid.
+=> Booting Puma
+=> Rails 5.2.8.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Exiting
+2023-11-26T06:19:39.354Z pid=3919547 tid=2c9n7 INFO: Booted Rails 5.2.8.1 application in development environment
+2023-11-26T06:19:39.354Z pid=3919547 tid=2c9n7 INFO: Running in ruby 2.7.5p203 (2021-11-24 revision f69aeb8314) [x86_64-linux]
+2023-11-26T06:19:39.355Z pid=3919547 tid=2c9n7 INFO: See LICENSE and the LGPL-3.0 for licensing details.
+2023-11-26T06:19:39.355Z pid=3919547 tid=2c9n7 INFO: Upgrade to Sidekiq Pro for more features and support: https://sidekiq.org
+2023-11-26T06:19:39.355Z pid=3919547 tid=2c9n7 INFO: Booting Sidekiq 6.5.12 with Sidekiq::RedisConnection::RedisAdapter options {}
+2023-11-26T06:19:39.367Z pid=3919547 tid=2c9n7 INFO: Cron Jobs - added job with name: update_currency_rates_job
+2023-11-26T06:19:39.369Z pid=3919547 tid=2c9n7 INFO: Cron Jobs - added job with name: update_currency_rates_job
+A server is already running. Check /home/yart/coding/ruby/cbr_currency/tmp/pids/server.pid.
+=> Booting Puma
+=> Rails 5.2.8.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Exiting
+A server is already running. Check /home/yart/coding/ruby/cbr_currency/tmp/pids/server.pid.
+=> Booting Puma
+=> Rails 5.2.8.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Exiting
+2023-11-26T06:24:51.527Z pid=3919547 tid=2c9n7 INFO: Shutting down
+2023-11-26T06:24:51.528Z pid=3919547 tid=2c8wj INFO: Scheduler exiting...
+2023-11-26T06:24:51.528Z pid=3919547 tid=2c9n7 INFO: Terminating quiet threads
+2023-11-26T06:24:51.528Z pid=3919547 tid=2c8w7 INFO: Scheduler exiting...
+2023-11-26T06:24:52.028Z pid=3919547 tid=2c9n7 INFO: Pausing to allow jobs to finish...
+2023-11-26T06:24:52.531Z pid=3919547 tid=2c9n7 INFO: Bye!

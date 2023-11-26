@@ -1,0 +1,25 @@
+<h1>Currency Rates</h1>
+
+<div id="chart"></div>
+
+<script>
+  var chart = c3.generate({
+    data: {
+      x: 'x',
+      columns: [
+        ['x', <%= raw @currency_rates.pluck(:date).uniq.map { |date| date.strftime("'%Y-%m-%d'") }.join(', ') %>],
+        ['USD', <%= raw @updated_usd_data %>],
+        ['EUR', <%= raw @updated_eur_data %>]
+      ],
+    },
+    axis: {
+      x: {
+        type: 'timeseries',
+        tick: {
+          format: '%Y-%m-%d'
+        }
+      }
+    }
+  });
+</script>
+
