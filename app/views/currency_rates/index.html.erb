@@ -7,9 +7,9 @@
     data: {
       x: 'x',
       columns: [
-        ['x', <%= raw @currency_rates.pluck(:date).uniq.map { |date| date.strftime("'%Y-%m-%d'") }.join(', ') %>],
-        ['USD', <%= raw @updated_usd_data %>],
-        ['EUR', <%= raw @updated_eur_data %>]
+        ['x',   <%= raw @dates %>],
+        ['USD', <%= raw @usd_rates %>],
+        ['EUR', <%= raw @eur_rates %>]
       ],
     },
     axis: {
