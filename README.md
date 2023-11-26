@@ -8,18 +8,18 @@ This is a web application that fetches and displays currency exchange rates from
 
 ### Technologies Used
 
-- Operating System: Linux
-- Database: PostgreSQL 12
-- Ruby on Rails: 5.2.8.1
-- Background Job Processing: Sidekiq
+- Operating System: **Linux**
+- Database: **PostgreSQL 12**
+- Ruby on Rails: **5.2.8.1**
+- Background Job Processing: **Sidekiq**
 
 ### Setup and Installation
 
 - Ensure you have a Linux-based operating system.
-- Install PostgreSQL 12.
-- Install Ruby on Rails 5.2.8.1.
-- Configure the database.yml file with the appropriate database settings.
-- Run bundle install to install project dependencies.
+- Install **PostgreSQL 12**.
+- Install **Ruby on Rails 5.2.8.1**.
+- **Configure** the **database.yml** file with the appropriate database settings.
+- Run `bundle install` to install project dependencies.
 - Run the following commands to set up the database and seed it with the latest currency exchange rates for the past month:
 
 ```bash
@@ -34,7 +34,7 @@ Also, you can run
 rails cbr_currency:setup
 ```
 
-to run these all using one command.
+to run these three using one command.
 
 ### Daily Update Task
 
@@ -52,14 +52,14 @@ RSpec is used for testing, covering various aspects of the application.
 
 ### Technologies Used
 
-- HTML5
-- CSS3
-- JavaScript ES6
-- Chart Library: C3.js
+- **HTML5**
+- **CSS3**
+- **JavaScript ES6**
+- Chart Library: **C3.js**
 
 ### Currency Rates Chart
 
-The homepage displays a chart using the C3.js library to visualize the currency exchange rates for the past month.
+The homepage displays a chart using the **C3.js** library to visualize the currency exchange rates for the past month.
 
 ### Data Display
 
@@ -76,7 +76,7 @@ bundle exec sidekiq -C config/sidekiq.yml &
 rails s -d
 ```
 
-Or you can do the sam by one command:
+Or you can do the same by one command:
 
 ```bash
 rails cbr_currency:run
@@ -115,4 +115,4 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://mit-license.org/license.txt) file for details.
