@@ -15,12 +15,12 @@ This is a web application that fetches and displays currency exchange rates from
 
 ### Setup and Installation
 
-- Ensure you have a Linux-based operating system.
-- Install **PostgreSQL 12**.
-- Install **Ruby on Rails 5.2.8.1**.
-- **Configure** the **database.yml** file with the appropriate database settings.
-- Run `bundle install` to install project dependencies.
-- Run the following commands to set up the database and seed it with the latest currency exchange rates for the past month:
+1. Ensure you have a Linux-based operating system.
+2. Install **PostgreSQL 12**.
+3. Install **Ruby on Rails 5.2.8.1**.
+4. **Configure** the **database.yml** file with the appropriate database settings.
+5. Run `bundle install` to install project dependencies.
+6. Run the following commands to set up the database and seed it with the latest currency exchange rates for the past month:
 
 ```bash
 rails db:create
@@ -35,6 +35,14 @@ rails cbr_currency:setup
 ```
 
 to run these three using one command.
+
+And even better to run
+
+```bash
+bin/setup
+```
+
+It sets up the app properly from the 5th step, but make shure before, that you have been prepared database.yml.
 
 ### Daily Update Task
 
