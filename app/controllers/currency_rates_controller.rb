@@ -1,15 +1,17 @@
 class CurrencyRatesController < ApplicationController
   def index
-    @currency_rates   = CurrencyRate.all
-    @updated_usd_data = format_currency_data(@currency_rates, 'USD')
-    @updated_eur_data = format_currency_data(@currency_rates, 'EUR')
+    @currency_rates = CurrencyRate.all
+
+    @dates     = @currency_rates.pluck(:date).uniq.map { |date| date.strftime("'%Y-%m-%d'") }.join(', ')
+    @usd_rates = format_currency_data(@currency_rates, 'USD')
+    @eur_rates = format_currency_data(@currency_rates, 'EUR')
   end
 
   private
 
   def format_currency_data(currency_rates, currency_code)
     data = currency_rates.where(currency_code: currency_code).pluck(:exchange_rate)
-    return 'Found nothing' unless data.present?
+    return 'Something went wrong' unless data.present?
 
     data.map(&:to_s).join(', ')
   end
