@@ -6,13 +6,15 @@ class CurrencyRateUpdater
   end
 
   def self.update_for_date(date)
-    url = form_url(date)
-    Rails.logger.info("Fetching data from #{url}")
-
+    url      = form_url(date)
     xml_data = fetch_xml_data(url)
 
-    return unless xml_data.is_a?(Nokogiri::XML::Document)
+    unless xml_data.is_a?(Nokogiri::XML::Document)
+      Rails.logger.error("Broken XML given from #{url}")
+      return
+    end
 
+    # TODO: need to refactor this part for easy expanding of the currencies list
     xml_data.xpath('//Valute[CharCode="USD" or CharCode="EUR"]').each do |valute|
       currency_code = valute.at('CharCode').text
       exchange_rate = valute.at('Value').text.sub(',', '.').to_f
@@ -22,7 +24,7 @@ class CurrencyRateUpdater
   end
 
   def self.fetch_xml_data(url)
-    uri = URI.parse(url)
+    uri      = URI.parse(url)
     response = Net::HTTP.get_response(uri)
 
     if response.is_a?(Net::HTTPSuccess)
@@ -33,7 +35,7 @@ class CurrencyRateUpdater
         nil
       end
     else
-      Rails.logger.error("Failed to fetch data from #{url}: HTTP error #{response.code}")
+      Rails.logger.error("Failed to fetch data from #{url}: HTTP Error #{response.code}")
       nil
     end
   rescue StandardError => e
@@ -48,7 +50,5 @@ class CurrencyRateUpdater
 
     currency_rate.exchange_rate = exchange_rate
     currency_rate.save!
-
-    Rails.logger.info("Updated or created currency rate: #{currency_rate.inspect}")
   end
 end
