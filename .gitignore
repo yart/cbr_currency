@@ -29,5 +29,5 @@
 /spec/vcr_cassettes
 storage
 tmp
-vendor/bundle/ruby/2.7.0
+vendor
 Gemfile.lock
