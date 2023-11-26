@@ -23,7 +23,10 @@ namespace :cbr_currency do
 
   namespace :db do
     desc 'Setup the database'
-    task setup: %i[create drop migrate seed]
+    task setup: %i[create migrate seed]
+
+    desc 'Reset the database'
+    task reset: %i[drop create migrate seed]
 
     desc 'Create the database'
     task create: :environment do
