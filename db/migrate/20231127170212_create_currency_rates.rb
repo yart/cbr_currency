@@ -1,4 +1,4 @@
-class CreateCurrencyRates < ActiveRecord::Migration[5.2]
+class CreateCurrencyRates < ActiveRecord::Migration[7.1]
   def change
     create_table :currency_rates do |t|
       t.date :date
