@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'net/http'
 
 class CurrencyRateUpdater
@@ -15,7 +17,7 @@ class CurrencyRateUpdater
     end
 
     # TODO: need to refactor this part for easy expanding of the currencies list
-    xml_data.xpath('//Valute[CharCode="USD" or CharCode="EUR"]').each do |valute|
+    xml_data.xpath('//Valute[CharCode="USD" or CharCode="EUR" or CharCode="CNY"]').each do |valute|
       currency_code = valute.at('CharCode').text
       exchange_rate = valute.at('Value').text.sub(',', '.').to_f
 
@@ -44,7 +46,7 @@ class CurrencyRateUpdater
   end
 
   def self.update_or_create_currency_rate(date, currency_code, exchange_rate)
-    currency_rate = CurrencyRate.find_or_initialize_by(date: date, currency_code: currency_code)
+    currency_rate = CurrencyRate.find_or_initialize_by(date:, currency_code:)
 
     return unless currency_rate.new_record? || currency_rate.exchange_rate != exchange_rate
 
