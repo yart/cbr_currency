@@ -9,18 +9,21 @@ This is a web application that fetches and displays currency exchange rates from
 ### Technologies Used
 
 - Operating System: **Linux**
-- Database: **PostgreSQL 12**
-- Ruby on Rails: **5.2.8.1**
+- Database: **PostgreSQL**
+- Ruby **3.2.2**
+- Ruby on Rails: **7.1.2**
 - Background Job Processing: **Sidekiq**
 
 ### Setup and Installation
 
 1. Ensure you have a Linux-based operating system.
-2. Install **PostgreSQL 12**.
-3. Install **Ruby on Rails 5.2.8.1**.
-4. **Configure** the **database.yml** file with the appropriate database settings.
-5. Run `bundle install` to install project dependencies.
-6. Run the following commands to set up the database and seed it with the latest currency exchange rates for the past month:
+2. Install **PostgreSQL**.
+3. Install **Ruby 3.2.2**.
+4. Install **Ruby on Rails 7.1.2**.
+5. **Configure** the **database.yml** file with the appropriate database settings.
+6. Run `bundle install` to install project dependencies.
+7. Run `yarn install` to install Bootstrap and its dependencies.
+8. Run the following commands to set up the database and seed it with the latest currency exchange rates for the past month:
 
 ```bash
 rails db:create
@@ -91,31 +94,6 @@ rails cbr_currency:run
 ```
 
 Visit http://localhost:3000 in your web browser to view the currency rates chart.
-
-## Files added to the Rails scaffold or changed here
-
-```
-app/controllers/application_controller.rb
-app/controllers/currency_rates_controller.rb
-app/jobs/update_currency_rates_job.rb
-app/models/currency_rate_updater.rb
-app/services/currency_rate_updater.rb
-app/views/currency_rates/index.html.erb
-app/views/currency_rates/application.html.erb
-config/initializeers/sidekiq.yml
-config/application.rb
-config/database.yml
-config/routes.rb
-config/schedule.yml
-config/sidekiq.yml
-db/migrate/*
-db/schema.rb
-db/seeds.rb
-lib/tasks/start.rake
-spec/**/*
-Gemfile
-README.md
-```
 
 ## Contributing
 
