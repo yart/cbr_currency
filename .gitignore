@@ -44,3 +44,4 @@ Gemfile.lock
 /node_modules
 storage
 tmp
+yarn-error.log
