@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'CurrencyRates', type: :request do
+RSpec.describe 'CurrencyChart', type: :request do
   describe 'GET /index' do
     it 'returns http success' do
       get '/'
