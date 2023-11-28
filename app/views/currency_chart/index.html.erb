@@ -1,15 +1,21 @@
-<h1>Currency Rates</h1>
+<h1>Currency Chart</h1>
 
 <div id="chart"></div>
 
 <script>
+  var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
   var chart = c3.generate({
+    size: {
+      height: vh * 0.7,
+    },
     data: {
       x: 'x',
       columns: [
         ['x',   <%= raw @dates %>],
         ['USD', <%= raw @usd_rates %>],
-        ['EUR', <%= raw @eur_rates %>]
+        ['EUR', <%= raw @eur_rates %>],
+        ['CNY', <%= raw @cny_rates %>]
       ],
     },
     axis: {
@@ -19,7 +25,6 @@
           format: '%Y-%m-%d'
         }
       }
-    }
+    },
   });
 </script>
-
