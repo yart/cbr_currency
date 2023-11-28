@@ -2,7 +2,8 @@
 
 This is a web application that fetches and displays currency exchange rates from the Central Bank of Russia (CBR).
 
-![CBR USD&EUR Rates](images/cbr_usd_eur_rates.png)
+![Chart](images/chart.png)
+![Table](images/table.png)
 
 ## Backend
 
