@@ -26,5 +26,6 @@ module CbrCurrency
     config.beginning_of_week = :monday
     config.active_job.queue_adapter = :sidekiq
     config.redis = { url: 'redis://localhost:6379/0' }
+    config.cbr_currency_settings = YAML.load_file("#{Rails.root}/config/cbr_currency_settings.yml")
   end
 end

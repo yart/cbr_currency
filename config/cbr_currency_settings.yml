@@ -1,0 +1,6 @@
+---
+api: "https://www.cbr.ru/scripts/XML_daily.asp?date_req=%{date}"
+list:
+  - USD
+  - EUR
+  - CNY
